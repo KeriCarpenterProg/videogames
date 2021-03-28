@@ -10,11 +10,30 @@ let apiKey = [
   "0441631dbf13c03d81036146f6dafc15",
   "8ce877dc2b29f8e245c041acedcff5ec"
 ];
-let currentKey = 1;
+let currentKey = 3;
 // declaring a database retrieved games object
 let gamesDB = [];
 // declaring a games object as well as all the fields and all the screenshots
 let games = [
+  {
+    name: "Miles Morales",
+    game_id: "1",
+    release: "12th November 2020",
+    genre: "Shooter",
+    platforms: "PS5",
+    summary:
+      "The latest adventure in the Spider-Man universe will build on and expand ‘Marvel’s Spider-Man’ through an all-new story. Players will experience the rise of Miles Morales as he masters new powers to become his own Spider-Man.",
+    cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dwe.jpg",
+    screenshots: [
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8bir.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc6qem.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/ar6dr.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/gxrqetgeesus7abzlxsu.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/bofvxbntojlvpwueihdg.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/yyynkripplx43svs9ifw.jpg"
+    ],
+    video: "https://www.youtube.com/embed/T03PxxuCfDA"
+  },
   {
     name: "Call of Duty",
     game_id: "83727",
@@ -100,7 +119,7 @@ class Text extends React.Component {
       screenshots: [],
       name: "",
       summary: "",
-      activeGame: 2,
+      activeGame: 0,
       coverNum: 0
     };
     this.clickMe = this.clickMe.bind(this);
