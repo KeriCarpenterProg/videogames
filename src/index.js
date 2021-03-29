@@ -125,7 +125,7 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/ar7fk.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/sc8biw.jpg"
     ],
-    video: "https://www.youtube.com/embed/tCI396HyhbQ"
+    video: "https://www.youtube.com/embed/tS0dl8KEbng"
   }
 ];
 
@@ -309,6 +309,7 @@ class Text extends React.Component {
             </div>
           </div>
           <div class="row">
+            <div class="backgroundclass">
             <div class="col s12 m4">
               <img src={games[this.state.activeGame].cover} width="100%" />
             </div>
@@ -318,6 +319,7 @@ class Text extends React.Component {
               <p>Release Date: {games[this.state.activeGame].release}</p>
               <p>Platforms: {games[this.state.activeGame].platforms}</p>
               <p>Genre: {games[this.state.activeGame].genre}</p>
+            </div>
             </div>
           </div>
 
