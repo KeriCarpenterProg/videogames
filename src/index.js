@@ -26,7 +26,7 @@ let games = [
     cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dwe.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/sc8bir.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_original/sc6qem.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8bis.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/ar6dr.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/gxrqetgeesus7abzlxsu.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/bofvxbntojlvpwueihdg.jpg",
@@ -40,7 +40,7 @@ let games = [
     release: "25th October 2019",
     genre: "Shooter",
     platforms: "PS4",
-    summary: "Not available right now.  Try again later.",
+    summary: "Modern Warfare is back! The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.",
     cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wkf.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/sc6qen.jpg",
@@ -53,12 +53,12 @@ let games = [
     video: "https://www.youtube.com/embed/3pyfKYwlGhQ"
   },
   {
-    name: "Marvel's Spider Man",
+    name: "Spider Man",
     game_id: "19565",
     release: "7th September, 2018",
     genre: "Adventure",
     platforms: "PS4",
-    summary: "Not available right now.  Try again later.",
+    summary: "Starring the world’s most iconic Super Hero, Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for, while also introducing elements never-before-seen in a Spider-Man game. From traversing with parkour and utilizing the environment, to new combat and blockbuster set pieces, it’s Spider-Man unlike any you’ve played before.",
     cover: "https://images.igdb.com/igdb/image/upload/t_original/co1r77.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/sc6khp.jpg",
@@ -97,15 +97,33 @@ let games = [
     release: "20th November 2019",
     genre: "Adventure, Role-playing(RPG)",
     platforms: "PS4",
-    summary: "Not available right now.  Try again later.",
+    summary: "Action & exploration third person game set in a post-apocalyptic open world.",
     cover: "https://images.igdb.com/igdb/image/upload/t_original/co1syk.jpg",
     screenshots: [
-      "https://images.igdb.com/igdb/image/upload/t_original/mknszfnaifmhssbrmkpl.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_original/r7hpzsqic1bjwyzn1bnq.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_original/wunlbofh23trw0u67gms.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc6l0i.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc6l0b.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc6l0e.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/s2zdtxopibrfjbxvpj5h.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/o4mg2wvhlcikaogvvzqe.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/gpt3d0gpue5mat4kkso6.jpg"
+    ],
+    video: "https://www.youtube.com/embed/tCI396HyhbQ"
+  },
+  {
+    name: "Ratchet and Clank",
+    game_id: "19564",
+    release: "11th June 2021",
+    genre: "Adventure, Role-playing(RPG)",
+    platforms: "PS5",
+    summary: "Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality. Jump between action-packed worlds, and beyond at mind-blowing speeds – complete with dazzling visuals and an insane arsenal – as the intergalactic adventurers blast onto the PS5 console.",
+    cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2str.jpg",
+    screenshots: [
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8bit.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8biu.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8biv.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8biw.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/ar7fk.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8biw.jpg"
     ],
     video: "https://www.youtube.com/embed/tCI396HyhbQ"
   }
@@ -196,17 +214,7 @@ class Text extends React.Component {
           "This is the game data I got from the database " +
             JSON.stringify(tempObject)
         );
-        // Future Work:  arrays need to be mapped and saved in my new object gamesDB.
-        // This will be a future enhancement. the fields artworks, platforms, screenshots, videos need this.
-        // const _data = data.map((value)=>{
-        //   const _url = "https://images.igdb.com/igdb/image/upload/t_original/"+value.image_id+".jpg"
-        //   return {
-        //     url: _url
-        //   }
-        // }
-        // )
-        // console.log("After update:  These are the new screenshots I retrieved from the DB: " + JSON.stringify(_data))
-        // this.setState({screenshots: _data})
+ 
       })
       .catch((err) => {
         console.error(err);
@@ -248,7 +256,7 @@ class Text extends React.Component {
         <div class="container">
           <div class="row">
             <div class="grey darken-1 row center">
-              <div class="col s12 m3">
+              <div class="col s12 m2">
                 <a
                   onClick={() => this.clickMe(0)}
                   href="#"
@@ -257,7 +265,7 @@ class Text extends React.Component {
                   {games[0].name}
                 </a>
               </div>
-              <div class="col s12 m3">
+              <div class="col s12 m2">
                 <a
                   onClick={() => this.clickMe(1)}
                   href="#"
@@ -266,7 +274,7 @@ class Text extends React.Component {
                   {games[1].name}
                 </a>
               </div>
-              <div onClick={() => this.clickMe(2)} class="col s12 m3">
+              <div onClick={() => this.clickMe(2)} class="col s12 m2">
                 <a
                   href="#"
                   class="waves-effect waves-light btn grey btn-large opac-btn"
@@ -274,12 +282,28 @@ class Text extends React.Component {
                   {games[2].name}
                 </a>
               </div>
-              <div onClick={() => this.clickMe(3)} class="col s12 m3">
+              <div onClick={() => this.clickMe(3)} class="col s12 m2">
                 <a
                   href="#"
                   class="waves-effect waves-light btn grey btn-large opac-btn"
                 >
                   {games[3].name}
+                </a>
+              </div>
+            <div onClick={() => this.clickMe(4)} class="col s12 m2">
+                <a
+                  href="#"
+                  class="waves-effect waves-light btn grey btn-large opac-btn"
+                >
+                  {games[4].name}
+                </a>
+              </div>
+              <div onClick={() => this.clickMe(5)} class="col s12 m2">
+                <a
+                  href="#"
+                  class="waves-effect waves-light btn grey btn-large opac-btn"
+                >
+                  {games[5].name}
                 </a>
               </div>
             </div>
@@ -311,6 +335,20 @@ class Text extends React.Component {
                 />
               </div>
             </div>
+            <div class="col s12 m4">
+              <img
+                width="100%"
+                height="100%"
+                src={games[this.state.activeGame].screenshots[0]}
+              />
+            </div>
+            <div class="col s12 m4">
+              <img
+                width="100%"
+                height="100%"
+                src={games[this.state.activeGame].screenshots[1]}
+              />
+            </div>
             {urls}
           </div>
         </div>
@@ -320,6 +358,3 @@ class Text extends React.Component {
 }
 
 ReactDOM.render(<Text />, document.getElementById("text"));
-
-// const rootElement = document.getElementById("text");
-// ReactDOM.render(<App />, rootElement);
